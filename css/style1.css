@@ -59,10 +59,22 @@ nav.nav-header {
 }
 .logo {
     display: flex;
+    width: min(27.8%, 234px);
+
+}
+div.title {
+    font-family: 'Barlow', sans-serif;
+    color: var(--opera-mauve);
+   display: flex;
+    flex-direction: column;
+
 }
 div.menu {
     align-self: flex-end;
-    
+}
+div.menu h1 {
+    padding: 0 0 0 20px;
+
 }
 ul.menu {
     display: flex;
