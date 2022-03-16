@@ -55,11 +55,15 @@ nav.nav-header {
     justify-content: space-between;
     align-items: center;
     background: var(--lavender-blush);
-    padding: 0vw 3vw 0vw 3vw;
+    padding: 0vw 5vw 0vw 5vw;
 }
 .logo {
-    display: flex;
-    width: min(27.8%, 234px);
+    width: max(18vw,205px);
+
+}
+.logo img{
+    max-height: 100%;
+    max-width: 100%;
 
 }
 div.title {
@@ -74,7 +78,7 @@ div.menu {
 }
 div.menu h1 {
     padding: 0 0 0 20px;
-
+    font-size: max(2.2vw,28px);
 }
 ul.menu {
     display: flex;
@@ -89,7 +93,8 @@ li.menu, li.submenu-li-productos {
     font-family: 'Barlow', sans-serif;
     font-weight: 300;
     color: var(--opera-mauve);
-        /* background: transparent;  */
+    font-size: max(1.6vw,16px);
+
     
 }
 li.menu-li-productos {
@@ -137,8 +142,72 @@ li.submenu-li-productos:hover {
 li.submenu-li-productos:hover>a {
     color: var(--snow);
 }
-div.main {
+.main {
     width: 100%;
     height: 80vw;
-    background-color: var(--opera-mauve);
+    background-color: var(--thistle);
+    display: flex;
+}
+.div-main {
+    width: 50%;
+    height: 37%;
+    background: #00000082;
+    position: relative;
+    left: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    /* visibility: hidden; */
+}
+div.logo-contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35%;
+    padding: 30px;
+}
+div.logo-contacto img{
+    max-width: 100%;
+    max-height: 100%;
+}
+div.form {
+    width: 60%;
+    display: flex;
+    row-gap: 1vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+}
+.form form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1vw;
+}
+.form h2 {
+    font-family: 'Barlow', sans-serif;
+    color: var(--snow);
+}
+input.input-contacto {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+}
+textarea {
+    border-radius: 5px;
+}
+#buton-enviar {
+    padding: 10px 35px;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 700;
+    background: #a996a08c;
+    border: none;
+    color: #240d1a;
+}
+#buton-enviar:hover {
+    background: #ad5c89d9;
+    color: var(--snow);
+    transition-property: all;
+    transition-duration: 0.6s;
+    cursor:pointer;
 }
