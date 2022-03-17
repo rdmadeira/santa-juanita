@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0 0;
     margin: 0 0;
+    font-family: 'Barlow', sans-serif;
 }
 :root {
     /* CSS HEX */
@@ -43,8 +44,9 @@ ul {
 a, a:visited {
     text-decoration: none;
     color: unset;
-    width: calc(width + 10px);
+    
 }
+
 header {
     width:100%;
     background: var(--lavender-blush);
@@ -147,7 +149,7 @@ li.submenu-li-productos:hover>a {
     height: max-content;
     background-color: var(--thistle);
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
 }
 .div-contacto {
     width: max(50%,450px);
@@ -230,7 +232,7 @@ div.footer-logo img {
     height: 100%;
 }
 section.section {
-    width: 100%;
+    width: 50%;
     display: flex;
     height: max-content;
 }
@@ -238,11 +240,17 @@ section.section {
     display:flex;
     flex-flow: row nowrap;
     width: 100%;
+    border-bottom: var(--opera-mauve);
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
 }
 div#img-sec0 {
     width: 40%;
     min-width: 300px;
     
+}
+#img-sec0 img {
+    filter: blur(2px) hue-rotate(335deg);
 }
 div#text-sec0 {
     display: flex;
@@ -271,10 +279,32 @@ div#text-sec0 {
     padding-left: 9em;
     font-size: max(2vw,15px);
 }
-/* .section div {
+section.section div {
     width: 50%;
-    min-width: 300px;
-} */
+    color: var(--mulberry);
+    overflow: hidden;
+}
+div.sec-text {
+    display: flex;
+    flex-direction: column;
+    padding: 5vw;
+    row-gap: 2vw;
+    font-size: 1.3em;
+}
+section.section div img {
+    object-fit: cover;
+    transform: scale(2);
+    width: 100%;
+    height: 100%;
+}
+.sec-text button {
+    padding: 1em;
+    background: var(--queen-pink);
+    cursor: pointer;
+}
+.sec-text a {
+    width: max-content;
+}
 
 
 
@@ -283,7 +313,16 @@ div#text-sec0 {
     nav.nav-header {
         justify-content: center;
     }
+    div#img-sec0 {
+        width: 70%;
+    }
+    div#text-sec0 {
+        width: 30%;
+    }
     #text-sec0 div {
-        width: 53vw;
+        width: 34vw;
+    }
+    #text-sec0 p {
+        padding-left: 5em;
     }
 }
