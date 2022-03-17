@@ -150,6 +150,9 @@ li.submenu-li-productos:hover>a {
     background-color: var(--thistle);
     display: flex;
     flex-flow: row wrap;
+    border-bottom: var(--mulberry);
+    border-bottom-width: 12vh;
+    border-bottom-style: solid;
 }
 .div-contacto {
     width: max(50%,450px);
@@ -242,7 +245,7 @@ section.section {
     width: 100%;
     border-bottom: var(--opera-mauve);
     border-bottom-style: solid;
-    border-bottom-width: 5px;
+    border-bottom-width: 12vh;
 }
 div#img-sec0 {
     width: 40%;
@@ -281,21 +284,28 @@ div#text-sec0 {
 }
 section.section div {
     width: 50%;
+    height: 60vh;
     color: var(--mulberry);
     overflow: hidden;
 }
 div.sec-text {
     display: flex;
     flex-direction: column;
-    padding: 5vw;
+    justify-content: flex-end;
+    padding: 3vw;
     row-gap: 2vw;
     font-size: 1.3em;
 }
 section.section div img {
     object-fit: cover;
-    transform: scale(2);
     width: 100%;
     height: 100%;
+}
+#img-sec1 img {
+    /* transform: scale(2); */
+}
+#img-sec3 img {
+    object-position: top;
 }
 .sec-text button {
     padding: 1em;
