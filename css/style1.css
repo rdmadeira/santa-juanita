@@ -238,6 +238,8 @@ section.section {
     width: 50%;
     display: flex;
     height: max-content;
+    border: 1px solid var(--mulberry);
+
 }
 .sec0  {
     display:flex;
@@ -250,10 +252,6 @@ section.section {
 div#img-sec0 {
     width: 40%;
     min-width: 300px;
-    
-}
-#img-sec0 img {
-    filter: blur(2px) hue-rotate(335deg);
 }
 div#text-sec0 {
     display: flex;
@@ -274,35 +272,40 @@ div#text-sec0 {
     right: 0px;
     padding: 0 2vw 0 0;
 }
-#text-sec0 h2 {
-    font-size: max(2.4vw,17px);
-
+#text-sec0 h2, .sec-text h2 {
+    font-size: min(max(2.4vw,20px),22px);
 }
-#text-sec0 p {
-    padding-left: 9em;
-    font-size: max(2vw,15px);
+#text-sec0 p, .sec-text p {
+    font-size: min(max(2.7vw,11px),18px);
 }
-section.section div {
+section.section>div {
     width: 50%;
     height: 60vh;
     color: var(--mulberry);
-    overflow: hidden;
+    
 }
+/* .contain-text {
+    background-color: #faf7f966;
+    padding-right: 2.5em;
+    display: flex;
+    height: fit-content;
+    row-gap: 1.6vw;
+    width: 25vw;
+    position: relative;
+    flex-direction: column;
+    justify-content: end;
+} */
 div.sec-text {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 3vw;
     row-gap: 2vw;
-    font-size: 1.3em;
 }
 section.section div img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-}
-#img-sec1 img {
-    /* transform: scale(2); */
 }
 #img-sec3 img {
     object-position: top;
@@ -319,7 +322,7 @@ section.section div img {
 
 
 /* ************************************** */
-@media screen and (max-width:678px) {
+@media screen and (max-width:760px) {
     nav.nav-header {
         justify-content: center;
     }
@@ -334,5 +337,14 @@ section.section div img {
     }
     #text-sec0 p {
         padding-left: 5em;
+    }
+    .main {
+        flex-flow: column;
+    }
+    section.section {
+        width: 100%;
+    }
+    #img-sec3, #text-sec2 {
+        order: 1;
     }
 }
