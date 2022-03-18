@@ -245,6 +245,7 @@ section.section {
     display:flex;
     flex-flow: row nowrap;
     width: 100%;
+    max-height: 410px;
     border-bottom: var(--opera-mauve);
     border-bottom-style: solid;
     border-bottom-width: 12vh;
@@ -276,7 +277,7 @@ div#text-sec0 {
     font-size: min(max(2.4vw,20px),22px);
 }
 #text-sec0 p, .sec-text p {
-    font-size: min(max(2.7vw,11px),18px);
+    font-size: min(max(2.7vw,14px),18px);
 }
 section.section>div {
     width: 50%;
