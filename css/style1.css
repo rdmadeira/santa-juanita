@@ -312,7 +312,7 @@ section.section div img {
     object-position: top;
 }
 .sec-text button {
-    padding: 1em;
+    padding: 1.5vw;
     background: var(--queen-pink);
     cursor: pointer;
 }
@@ -327,14 +327,25 @@ section.section div img {
     nav.nav-header {
         justify-content: center;
     }
+    section.sec0 {
+        flex-flow: column nowrap;
+        width: 100%;
+        align-items: center;
+    
+    }
     div#img-sec0 {
-        width: 70%;
+        width: 86%;
+        justify-self: center;
     }
     div#text-sec0 {
-        width: 30%;
+        width: 100%;
     }
     #text-sec0 div {
-        width: 34vw;
+        background: #f3e8eea8;
+        position: absolute;
+        width: 100%;
+        right: 0px;
+        padding: 2vw 2vw 2vw 0;
     }
     #text-sec0 p {
         padding-left: 5em;
@@ -344,6 +355,9 @@ section.section div img {
     }
     section.section {
         width: 100%;
+    }
+    section.section>div {
+        height: 40vh;
     }
     #img-sec3, #text-sec2 {
         order: 1;
