@@ -60,7 +60,7 @@ nav.nav-header {
     padding: 0vw 5vw 0vw 5vw;
 }
 .logo {
-    width: min(20vw,200px);
+    width: min(20vw,165px);
     min-width: 127px;
 }
 .logo img{
@@ -146,12 +146,18 @@ li.submenu-li-productos:hover>a {
 }
 .main {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    background: var(--lavender-blush);
+}
+.div-main {
+    width: 100%;
     height: max-content;
     background-color: var(--thistle);
     display: flex;
     flex-flow: row wrap;
     border-bottom: var(--mulberry);
-    border-bottom-width: 12vh;
+    border-bottom-width: 6vh;
     border-bottom-style: solid;
 }
 .div-contacto {
@@ -226,6 +232,8 @@ footer {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: 3vw 0;
+
 }
 div.footer-logo {
     width: 10%;
@@ -274,10 +282,10 @@ div#text-sec0 {
     padding: 0 2vw 0 0;
 }
 #text-sec0 h2, .sec-text h2 {
-    font-size: min(max(2.4vw,20px),22px);
+    font-size: min(max(2.4vw,17px),22px);
 }
 #text-sec0 p, .sec-text p {
-    font-size: min(max(2.7vw,14px),18px);
+    font-size: min(max(2.7vw,12px),18px);
 }
 section.section>div {
     width: 50%;
@@ -323,15 +331,35 @@ section.section div img {
 
 
 /* ************************************** */
+@media screen and (min-width:1080px) {
+    .div-main {
+        width: 80%;
+    }
+    .sec0 {
+        max-height: 480px;
+
+    }
+    div#img-sec0 {
+        width: 55%;
+    }
+    #text-sec0 div {
+        right: 10%;
+        width: 50vw;
+    }
+}
+
+/* ************************************** */
 @media screen and (max-width:760px) {
     nav.nav-header {
+        flex-direction: column;
         justify-content: center;
+        align-content: center;
     }
     section.sec0 {
         flex-flow: column nowrap;
         width: 100%;
         align-items: center;
-    
+        max-height: fit-content;
     }
     div#img-sec0 {
         width: 86%;
@@ -350,7 +378,7 @@ section.section div img {
     #text-sec0 p {
         padding-left: 5em;
     }
-    .main {
+    .div-main {
         flex-flow: column;
     }
     section.section {
@@ -361,5 +389,9 @@ section.section div img {
     }
     #img-sec3, #text-sec2 {
         order: 1;
+    }
+    section.section div img {
+        object-fit: contain;
+        width: 80%;
     }
 }
