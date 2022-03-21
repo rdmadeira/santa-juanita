@@ -245,6 +245,7 @@ footer {
     background: var(--lavender-blush);
     width: 100%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -252,9 +253,22 @@ footer {
 
 }
 div.footer-logo {
-    width: 10%;
+    width: 12%;
+    min-width: 115px;
 }
 div.footer-logo img {
+    width: 100%;
+    height: 100%;
+}
+.redes {
+    display: flex;
+    column-gap: 3vw;
+}
+.redes>div {
+    width: 5%;
+    
+}
+.instagram div img {
     width: 100%;
     height: 100%;
 }
@@ -309,17 +323,7 @@ section.section>div {
     color: var(--mulberry);
     
 }
-/* .contain-text {
-    background-color: #faf7f966;
-    padding-right: 2.5em;
-    display: flex;
-    height: fit-content;
-    row-gap: 1.6vw;
-    width: 25vw;
-    position: relative;
-    flex-direction: column;
-    justify-content: end;
-} */
+
 div.sec-text {
     display: flex;
     flex-direction: column;
@@ -343,6 +347,7 @@ section.section div img {
 .sec-text a {
     width: max-content;
 }
+
 
 
 
@@ -429,6 +434,13 @@ section.section div img {
     #text-sec0 p {
         padding-left: 5em;
     }
+    .sec-text h2 {
+        font-size: min(max(2.2vw,18px),22px);
+
+    }
+    .sec-text p {
+        font-size: min(max(2.3vw,14px),16px);
+    }
     .div-main {
         flex-flow: column;
     }
@@ -436,7 +448,8 @@ section.section div img {
         width: 100%;
     }
     section.section>div {
-        height: 28vh;
+        height: 29vh;
+        min-height: 230px;
     }
     #img-sec3, #text-sec2 {
         order: 1;
