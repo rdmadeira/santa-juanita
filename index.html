@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style1.css">
-   
+    <script src="./js/main.js"></script>
     <title>Santa Juanita - Mimos en el Alma</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
                         </ul>
                     </li>
                     <li class="menu"><a href="#galeria" title="Galeria de fotos"> Galeria</a></li>
-                    <li class="menu"><a href="#contacto" title="Contacto"> Contacto</a></li>
+                    <li class="menu"><a href="#contacto" title="Contacto" onclick="showContactoInputs()" id="click-contacto"> Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -106,7 +106,7 @@
                     </a>
                 </div>
             </section>
-            <section class="div-contacto">
+            <section class="div-contacto" id="contactos">
                 <div class="form">
                     <h2>Dejanos un mensaje!</h2>
                     <form action="">

@@ -182,10 +182,12 @@ li.submenu-li-productos:hover>a {
     padding: 0 0 2vw 0;
     background: #00000082;
     position: absolute;
-    right: 0px;
+    right: -100vw;
     display: flex;
     flex-wrap: wrap;
     visibility: hidden;
+    opacity: 0;
+    transition: all 0.5s 0.5s ease;
 }
 div.logo-contacto {
     display: flex;
