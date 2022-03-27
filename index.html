@@ -4,8 +4,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style1.css">
-    <script src="./js/main.js"></script>
     <title>Santa Juanita - Mimos en el Alma</title>
+    <script src="./js/main.js"></script>
 </head>
 <body>
     <header>
@@ -29,7 +29,7 @@
                         </ul>
                     </li>
                     <li class="menu"><a href="#galeria" title="Galeria de fotos"> Galeria</a></li>
-                    <li class="menu"><a href="#contacto" title="Contacto" onclick="showContactoInputs()" id="click-contacto"> Contacto</a></li>
+                    <li class="menu" id="click-contacto"><a href="#" title="Contacto"> Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -37,6 +37,24 @@
     </header>
     <main class="main">
         <div class="div-main">
+            <section class="div-contacto" id="contactos">
+                <div class="form">
+                    <h2>Dejanos un mensaje!</h2>
+                    <form action="">
+                        <input class="input-contacto"type="text" name="Nombre" id="nombre" placeholder="Nombre"/>
+                        <input class="input-contacto"type="text" name="Apellido" id="apellido" placeholder="Apellido"/>
+                        <input class="input-contacto"type="number" name="Telefono" id="telefono" placeholder="Teléfono"/>
+                        <input class="input-contacto"type="email" name="email" id="email" placeholder="Correo Electronico"/>
+                        <textarea name="mensaje" id="mensaje" cols="30" rows="8" placeholder="Deje Aqui tu Mensaje"></textarea>
+                    </form>
+                </div>
+                <div class="logo-contacto">
+                    <img src="./assets/Contacts_29936.png" alt="logo-contacto-agenda">
+                    <div class="boton-enviar">
+                        <button type="submit" id="buton-enviar">ENVIAR</button>
+                    </div>
+                </div>
+            </section><!--  -->
             <section class="sec0">
                 <div id="img-sec0">
                     <img src="./assets/vela-2.jpg" alt="Vela" title="Presentación" width="100%" height="100%">
@@ -106,24 +124,6 @@
                     </a>
                 </div>
             </section>
-            <section class="div-contacto" id="contactos">
-                <div class="form">
-                    <h2>Dejanos un mensaje!</h2>
-                    <form action="">
-                        <input class="input-contacto"type="text" name="Nombre" id="nombre" placeholder="Nombre"/>
-                        <input class="input-contacto"type="text" name="Apellido" id="apellido" placeholder="Apellido"/>
-                        <input class="input-contacto"type="number" name="Telefono" id="telefono" placeholder="Teléfono"/>
-                        <input class="input-contacto"type="email" name="email" id="email" placeholder="Correo Electronico"/>
-                        <textarea name="mensaje" id="mensaje" cols="30" rows="8"></textarea>
-                    </form>
-                </div>
-                <div class="logo-contacto">
-                    <img src="./assets/Contacts_29936.png" alt="logo-contacto-agenda">
-                    <div class="boton-enviar">
-                        <button type="submit" id="buton-enviar">ENVIAR</button>
-                    </div>
-                </div>
-            </section>
         </div>
     </main>
     <footer>
@@ -153,5 +153,6 @@
             </div>
         </div>
     </footer>
+    
 </body>
 </html>
