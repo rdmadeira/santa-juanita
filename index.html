@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style1.css">
-    <script src="./js/main.js"></script>
+    
     <title>Santa Juanita - Mimos en el Alma</title>
 </head>
 <body>
@@ -13,12 +13,12 @@
             <div class="logo">
                 <img src="./assets/SANTA-JUANITA-original-removebg-preview-cortado.png" alt="logotipo-santa-juanita">
             </div>
-            <div class="menu-vertical">
+            <div class="menu-vertical" id="menu-vertical" onclick="showMenuMobile()">
                 <img src="./assets/menu-vertical.png" alt="icono-menu-vertical">
             </div>
             <div class="menu">
                 <div class="title"><h1>Santa Juanita - Mimos al Alma </h1></div>
-                <ul class="menu">
+                <ul class="menu" id="ul-menu">
                     <li class="menu"><a href="index.html" title="Inicio">Inicio</li></a>
                     <li class="menu menu-li-productos">Productos
                         <ul class="submenu-productos">
@@ -29,7 +29,7 @@
                         </ul>
                     </li>
                     <li class="menu"><a href="#galeria" title="Galeria de fotos"> Galeria</a></li>
-                    <li class="menu" id="click-contacto"><a href="#" title="Contacto" > Contacto</a></li>
+                    <li class="menu" id="click-contacto" onclick="showContactoInputs()"><a href="#" title="Contacto" > Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -153,6 +153,6 @@
             </div>
         </div>
     </footer>
-    
+    <script src="./js/index.js"></script>    
 </body>
 </html>
