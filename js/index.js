@@ -5,17 +5,17 @@ function showContactoInputs() {
     
     var { visibility, sectionContacto } = newFunction();
         
-        if (visibility =='hidden') {
-                sectionContacto.style.visibility = 'visible';
-                sectionContacto.style.opacity = 1;
-                sectionContacto.style.width = 'min(60%,600px)';
-                
-            } else {
-                sectionContacto.style.visibility = 'hidden';
-                sectionContacto.style.opacity = 0;
-                sectionContacto.style.width = 0;
-                }
-    }
+    if (visibility =='hidden') {
+            sectionContacto.style.visibility = 'visible';
+            sectionContacto.style.opacity = 1;
+            sectionContacto.style.width = '100%';
+            
+        } else {
+            sectionContacto.style.visibility = 'hidden';
+            sectionContacto.style.opacity = 0;
+            sectionContacto.style.width = 0;
+            }
+}
 
     
 function newFunction() {
@@ -45,3 +45,4 @@ function showMenuMobile() {
     
     
 }
+

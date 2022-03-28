@@ -101,7 +101,7 @@ div.menu h1 {
     text-align: center;
 }
 ul.menu {
-    visibility: visible !important;
+    visibility: visible;
     display: flex;
     flex-flow: row wrap;
     align-items: flex-end;
@@ -406,6 +406,7 @@ section.section div img {
     left: calc((100vw - 75%)/2);
     top: 20%;
     opacity: 0;
+    z-index: 1;
     }
     /* div.menu-vertical:hover~ div.menu ul.menu {
         visibility: visible;
