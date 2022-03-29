@@ -24,6 +24,7 @@ function newFunction() {
     return { visibility, sectionContacto };
 }
 
+
 function showMenuMobile() {
     var menuVertical = document.getElementById('ul-menu');
     var visibility2 = menuVertical.style.visibility;
