@@ -194,6 +194,16 @@ li.submenu-li-productos:hover>a {
     transition: all 0.5s 0s ease;
     z-index: 2;
 }
+.btn-cerrar {
+    padding: 2vw;
+    border: 3px solid var(--snow);
+    background: var(--opera-mauve);
+    color: var(--snow);
+    font-weight: 800;
+    border-radius: 5px;
+    position: absolute;
+    cursor: pointer;
+}
 div.logo-contacto {
     display: flex;
     flex-direction: column;
