@@ -13,14 +13,14 @@
             <div class="logo">
                 <img src="./assets/SANTA-JUANITA-original-removebg-preview-cortado.png" alt="logotipo-santa-juanita">
             </div>
-            <div class="menu-vertical" id="menu-vertical" onclick="showMenuMobile()">
+            <div class="menu-vertical" id="menu-vertical">
                 <img src="./assets/menu-vertical.png" alt="icono-menu-vertical">
             </div>
             <div class="menu">
                 <div class="title"><h1>Santa Juanita - Mimos al Alma </h1></div>
                 <ul class="menu" id="ul-menu">
                     <li class="menu"><a href="index.html" title="Inicio">Inicio</li></a>
-                    <li class="menu menu-li-productos">Productos
+                    <li class="menu menu-li-productos" id="menu-productos">Productos
                         <ul class="submenu-productos">
                             <li class="submenu-li-productos"><a href="#producto1">Velas</a></li>
                             <li class="submenu-li-productos"><a href="#producto2">Difusores</a></li>
@@ -29,7 +29,7 @@
                         </ul>
                     </li>
                     <li class="menu"><a href="#galeria" title="Galeria de fotos"> Galeria</a></li>
-                    <li class="menu" id="click-contacto" onclick="showContactoInputs()"><a href="#" title="Contacto" > Contacto</a></li>
+                    <li class="menu" id="click-contacto" ><a href="#" title="Contacto" > Contacto</a></li>
                 </ul>
             </div>
         </nav>
@@ -38,7 +38,7 @@
     <main class="main">
         <div class="div-main">
             <section class="div-contacto" id="contactos">
-                <button class="btn-cerrar" onclick="cambioCss()"> X </button>
+                <button class="btn-cerrar" id="btn-cerrar" > X </button>
                 <div class="form">
                     <h2>Dejanos un mensaje!</h2>
                     <form action="">
@@ -51,9 +51,9 @@
                 </div>
                 <div class="logo-contacto">
                     <img src="./assets/Contacts_29936.png" alt="logo-contacto-agenda">
-                    <div class="boton-enviar">
+                    <!-- <div class="boton-enviar"> -->
                         <button type="submit" id="buton-enviar">ENVIAR</button>
-                    </div>
+                    <!-- </div> -->
                 </div>
             </section><!--  -->
             <section class="sec0">
@@ -155,6 +155,6 @@
         </div>
     </footer>
     <script src="./js/index.js"></script>
-    <script src="./js/index2.js"></script>
+    <!-- <script src="./js/index2.js"></script> -->
 </body>
 </html>

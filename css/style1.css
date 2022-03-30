@@ -182,10 +182,11 @@ li.submenu-li-productos:hover>a {
 }
 .div-contacto {
     width: 0px;
+    max-width: 830px;
     overflow: hidden;
     height: max-content;
     padding: 0 0 2vw 0;
-    background: #00000082;
+    background: #000000bf;
     position: absolute;
     right: 0px;
     display: flex;
@@ -195,13 +196,15 @@ li.submenu-li-productos:hover>a {
     z-index: 2;
 }
 .btn-cerrar {
-    padding: 2vw;
-    border: 3px solid var(--snow);
-    background: var(--opera-mauve);
+    padding: 3% 3.5%;
+    border: 1px solid var(--snow);
+    background: transparent;
     color: var(--snow);
     font-weight: 800;
     border-radius: 5px;
     position: absolute;
+    top: 20px;
+    left: 20px;
     cursor: pointer;
 }
 div.logo-contacto {
@@ -209,7 +212,7 @@ div.logo-contacto {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    row-gap: 8em;
+    row-gap: 5vw;
     width: 35%;
     padding: 30px;
 }
@@ -225,6 +228,7 @@ div.form {
     justify-content: flex-start;
     align-items: center;
     padding-top: 20px;
+    margin-left: 8vw;
 }
 .form form {
     display: flex;
@@ -246,7 +250,7 @@ textarea {
     padding: 1vw 1vw;
 }
 #buton-enviar {
-    padding: 1vw 5vw;
+    padding: 6% 30%;
     font-family: 'Barlow', sans-serif;
     font-weight: 700;
     background: #303356;
@@ -373,11 +377,21 @@ section.section div img {
 
 
 /* ************************************** */
-@media screen and (min-width:1080px) {
+@media screen and (min-width:521px) {
     ul.menu {
         visibility: visible !important;
         opacity: 1!important;
     }
+}
+@media screen and (min-width:521px) and (max-width:720px){
+    div.menu {
+        align-self: center;
+    }
+    nav.nav-header {
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:1080px) {
     .div-main {
         width: 80%;
     }

@@ -1,14 +1,16 @@
-showContactoInputs();
+window.onload = showContactoInputs();
+ 
+var sectionContacto = document.getElementById('contactos');
 
-
+document.getElementById('click-contacto').addEventListener('click', showContactoInputs);
 function showContactoInputs() {
-    
-    var { visibility, sectionContacto } = newFunction();
-        
+    var sectionContacto = document.getElementById('contactos');
+    var visibility = sectionContacto.style.visibility;    
     if (visibility =='hidden') {
             sectionContacto.style.visibility = 'visible';
             sectionContacto.style.opacity = 1;
             sectionContacto.style.width = '100%';
+            sectionContacto.style.maxWidth = '850px';
             
         } else {
             sectionContacto.style.visibility = 'hidden';
@@ -16,15 +18,13 @@ function showContactoInputs() {
             sectionContacto.style.width = 0;
             }
 }
-
-    
-function newFunction() {
-    var sectionContacto = document.getElementById('contactos');
-    var visibility = sectionContacto.style.visibility;
-    return { visibility, sectionContacto };
+document.getElementById('btn-cerrar').addEventListener('click', cambioCss)
+function cambioCss() {
+    sectionContacto.style.visibility = 'hidden';
+    sectionContacto.style.opacity = 0;
+    sectionContacto.style.width = 0;
 }
-
-
+document.getElementById('menu-vertical').addEventListener('click', showMenuMobile);   
 function showMenuMobile() {
     var menuVertical = document.getElementById('ul-menu');
     var visibility2 = menuVertical.style.visibility;
@@ -43,7 +43,11 @@ function showMenuMobile() {
         menuVertical.style.visibility = 'visible';
         menuVertical.style.opacity = 1;
     }
-    
-    
 }
+/* document.getElementById('menu-productos').addEventListener('click', abrirProductos);
+function abrirProductos() {
+    var sheet = document.styleSheets[0];
+    sheet.styleSheet.insertRule("ul.submenu-productos{display: flex;flex-direction: column;visibility: visible; opacity: 1;position: absolute; width: max-content; top: 39px; left: -10px;}", 40);
+} */
+
 
