@@ -1,6 +1,6 @@
-window.onload = showContactoInputs();
+window.onload = function (){
+    var sectionContacto = document.getElementById('contactos');
  
-var sectionContacto = document.getElementById('contactos');
 
 document.getElementById('click-contacto').addEventListener('click', showContactoInputs);
 function showContactoInputs() {
@@ -12,11 +12,17 @@ function showContactoInputs() {
             sectionContacto.style.width = '100%';
             sectionContacto.style.maxWidth = '850px';
             
-        } else {
+        } else if (visibility == 'visible') {
             sectionContacto.style.visibility = 'hidden';
             sectionContacto.style.opacity = 0;
             sectionContacto.style.width = 0;
             }
+        else {
+            sectionContacto.style.visibility = 'visible';
+            sectionContacto.style.opacity = 1;
+            sectionContacto.style.width = '100%';
+            sectionContacto.style.maxWidth = '850px';
+        }    
 }
 document.getElementById('btn-cerrar').addEventListener('click', cambioCss)
 function cambioCss() {
@@ -49,5 +55,4 @@ function abrirProductos() {
     var sheet = document.styleSheets[0];
     sheet.styleSheet.insertRule("ul.submenu-productos{display: flex;flex-direction: column;visibility: visible; opacity: 1;position: absolute; width: max-content; top: 39px; left: -10px;}", 40);
 } */
-
-
+};
