@@ -374,7 +374,47 @@ section.section div img {
     width: max-content;
 }
 
-
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+      filter: blur(40px);
+    }
+    100% {
+      opacity:1;
+      filter: blur(0);
+    }
+  }
+  @keyframes text-blur-in {
+    0% {
+      filter: blur(12px) opacity(0%);
+    }
+    100% {
+      filter: blur(0);
+    }
+  }
+  .fade-in-blur-first {
+    animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
+    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
+    -moz-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 1.8s backwards;
+    -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
+    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
+  }
+  .fade-in-blur-second {
+    animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+    -webkit-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+    -moz-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+    -o-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+    -ms-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+  }
+  .fade-in-blur-third {
+    animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s backwards;
+    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
+    -moz-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
+    -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
+    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s 2.4s  backwards;
+  }
+  
+  
 
 
 /* ************************************** */
