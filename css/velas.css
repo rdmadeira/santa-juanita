@@ -55,6 +55,7 @@ main {
 }
 .ctn-img-vela {
     width: 50%;
+    height: 25vw;
     overflow: hidden;
     border-radius: 45%;
     box-shadow: 10px 9px 10px grey;
@@ -79,7 +80,7 @@ h2.txt-velas-soja {
 }
 h3.txt-velas-soja {
     text-align: center;
-    margin: 2vw 0;
+    margin: 4vw 0 2vw;
     font-size: 2em;
     text-shadow: 2px 2px 3px var(--opera-mauve);
 }
@@ -93,6 +94,23 @@ p.txt-velas-soja {
 p.txt-velas-soja::first-letter {
     font-size: larger;
 }
+
+/* ****************** Difusores de Varillas ****************************** */
+ul.txt-velas-soja {
+    list-style:outside;
+    line-height: 4vh;
+    font-size: 1.1em;
+    font-style: italic;
+    text-align: justify;
+    margin-bottom: 1vw;
+    
+}
+ul.txt-velas-soja li {
+    width: 80%;
+    margin: 2vh auto;
+}
+
+/* ********************* Key Frames **************************************** */
 
 @keyframes fadeIn{
     0% {
@@ -132,4 +150,19 @@ p.txt-velas-soja::first-letter {
     -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
     -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
 } 
-  
+/* *************************** Media Queries ********************************************* */  
+@media screen and (min-width:521px) and (max-width:1080px) {
+    ul.txt-velas-soja li {
+        width: 95%;
+        font-size: 1.7em;
+
+    }
+    .ctn-img-vela {
+        width: 70%;
+        height: 40vw;
+    }
+    p.txt-velas-soja {
+        font-size: 1.8em;
+
+    }
+}
