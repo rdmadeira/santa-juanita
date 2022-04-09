@@ -176,9 +176,7 @@ li.submenu-li-productos:hover>a {
     background-color: var(--thistle);
     display: flex;
     flex-flow: row wrap;
-    border-bottom: var(--mulberry);
-    border-bottom-width: 6vh;
-    border-bottom-style: solid;
+   
 }
 .div-contacto {
     width: 0px;
@@ -379,11 +377,45 @@ section.section div img {
       opacity:0;
       filter: blur(40px);
     }
-    100% {
-      opacity:1;
-      filter: blur(0);
+    
+    60% {
+        filter: blur(10px);
     }
-  }
+    100% {
+        opacity:1;
+        filter: blur(0);
+    }
+}
+@keyframes scale {
+    0% {
+        transform: scale(0.01) translate(-24vw, -24vw);
+    }
+    50% {
+        
+        transform: translate(-10vw, 10 vw) scale(0.1,0.1);
+    }
+    
+    100% {
+        transform: translate(0px, 0px) scale(1,1);
+
+    }    
+}
+@keyframes shake {
+    0% {
+        transform: rotatey(90deg);
+    }
+    50% {
+        transform: rotatey(-15deg);
+
+    }
+    85% {
+        transform: rotatey(15deg);
+    }
+    100% {
+        transform: rotatey(0deg);
+    }
+    
+}
   @keyframes text-blur-in {
     0% {
       filter: blur(12px) opacity(0%);
@@ -400,18 +432,18 @@ section.section div img {
     -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
   }
   .fade-in-blur-second {
-    animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
-    -webkit-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
-    -moz-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+    animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards, shake 1s 2s;
+    -webkit-animation: fadeIn linear 2.7s 1.5s backwards, scale 1s 2.4s backwards;
+    -moz-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards, shake linear 1s 2s;
     -o-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
     -ms-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
   }
   .fade-in-blur-third {
     animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s backwards;
-    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
+    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s 2.5s backwards;
     -moz-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
     -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
-    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s 2.4s  backwards;
+    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s  backwards;
   }
   
   
