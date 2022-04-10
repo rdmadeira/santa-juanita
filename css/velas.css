@@ -33,7 +33,8 @@
 }
 
 main {
-    background: var(--opera-mauve);
+    background: linear-gradient(326deg, var(--lavender-blush), var(--opera-mauve));
+    background-size: 100% 300%;
     display: flex;
     justify-content: center;
     border-bottom: solid 30px var(--twilight-lavender);
@@ -145,11 +146,11 @@ ul.txt-velas-soja li {
   -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 5s 1s backwards;
 }
 .text-blur-in {
-    animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
-    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s  backwards;
-    -moz-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
-    -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
-    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
+    animation: text-blur-in cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
+    -webkit-animation: text-blur-in cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s  backwards;
+    -moz-animation: text-blur-in cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
+    -o-animation: text-blur-in cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
+    -ms-animation: text-blur-in cubic-bezier(0, 0, 0.33, 1.01) 2.4s 1.5s backwards;
 } 
 /* *************************** Media Queries ********************************************* */  
 @media screen and (min-width:521px) and (max-width:1080px) {

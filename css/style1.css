@@ -106,7 +106,6 @@ ul.menu {
     flex-flow: row wrap;
     align-items: flex-end;
     column-gap: 10px;
-    
 }
 li.menu, li.submenu-li-productos {
     padding: 15px;
@@ -115,8 +114,6 @@ li.menu, li.submenu-li-productos {
     font-weight: 300;
     color: var(--opera-mauve);
     font-size: max(1.6vw,16px);
-
-    
 }
 li.menu-li-productos {
     cursor: pointer;
@@ -133,7 +130,8 @@ ul.submenu-productos {
     position: absolute;
     width: max-content;
     top: 39px;
-    left: -10px;    
+    left: -10px;  
+    z-index: 3;  
 }
 
 li.menu:hover, li.menu-li-productos:hover {
@@ -167,8 +165,9 @@ li.submenu-li-productos:hover>a {
     width: 100%;
     display: flex;
     justify-content: center;
-    background: var(--lavender-blush);
+    background: linear-gradient(326deg, var(--lavender-blush), var(--opera-mauve));
     overflow-x: hidden;
+    background-size: 100% 300%;
 }
 .div-main {
     width: 100%;
@@ -386,35 +385,28 @@ section.section div img {
         filter: blur(0);
     }
 }
-@keyframes scale {
-    0% {
-        transform: scale(0.01) translate(-24vw, -24vw);
-    }
-    50% {
-        
-        transform: translate(-10vw, 10 vw) scale(0.1,0.1);
-    }
-    
-    100% {
-        transform: translate(0px, 0px) scale(1,1);
 
-    }    
-}
 @keyframes shake {
     0% {
-        transform: rotatey(90deg);
+        transform: skew(0deg,0deg) translate3d(0px,0px,0px);
+        transform-origin: left top;
+        transform-style: preserve-3d;
     }
-    50% {
-        transform: rotatey(-15deg);
-
+    33% {
+        transform: skew(10deg,3deg) translate3d(15px,15px,0px) rotateY(-30deg);
+        transform-origin: left bottom;
+        transform-style: preserve-3d;
     }
-    85% {
-        transform: rotatey(15deg);
+    67% {
+        transform: skew(0deg,0deg) translate3d(0px, 0px,0px) ;
+        transform-origin: left top;
+        transform-style: preserve-3d;
     }
     100% {
-        transform: rotatey(0deg);
+        transform: skew(-10deg,-3deg) translate3d(-25px,-15px,0px) rotateY(30deg);
+        transform-origin: right bottom;
+        transform-style: preserve-3d;
     }
-    
 }
   @keyframes text-blur-in {
     0% {
@@ -424,6 +416,17 @@ section.section div img {
       filter: blur(0);
     }
   }
+  @keyframes gradient-rotate {
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 100%;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+  }
   .fade-in-blur-first {
     animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
     -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
@@ -432,24 +435,45 @@ section.section div img {
     -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 2.4s backwards;
   }
   .fade-in-blur-second {
-    animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards, shake 1s 2s;
-    -webkit-animation: fadeIn linear 2.7s 1.5s backwards, scale 1s 2.4s backwards;
-    -moz-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards, shake linear 1s 2s;
-    -o-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
-    -ms-animation: fadeIn cubic-bezier(0, 0, 0, 1) 3s 1.8s backwards;
+    animation: fadeIn linear 2.7s 1.5s backwards;
+    -webkit-animation: fadeIn linear 2.7s 1.5s backwards;
+    -moz-animation: fadeIn linear 2.7s 1.5s backwards;
+    -o-animation: fadeIn linear 2.7s 1.5s backwards;
+    -ms-animation: fadeIn linear 2.7s 1.5s backwards;
   }
   .fade-in-blur-third {
-    animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s backwards;
-    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s 2.5s backwards;
-    -moz-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
-    -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s backwards;
-    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s  backwards;
+    animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s both;
+    -webkit-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s 2.5s both;
+    -moz-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s both;
+    -o-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s   2.4s both;
+    -ms-animation: fadeIn cubic-bezier(0, 0, 0.33, 1.01) 3s  2.4s both;
   }
+  .shake {
+      animation: shake infinite 17s 9s ease-in-out alternate ;
+      -webkit-animation: shake infinite 17s 9s ease-in-out alternate ;
+      -moz-animation: shake infinite 17s 9s ease-in-out alternate;
+      -o-animation: shake infinite 17s 9s ease-in-out alternate;
+      -ms-animation: shake infinite 17s 9s ease-in-out alternate;
+  }
+  .shake-2 {
+    animation: shake infinite 17s 14s ease-in-out alternate ;
+    -webkit-animation: shake infinite 17s 14s ease-in-out alternate ;
+    -moz-animation: shake infinite 17s 14s ease-in-out alternate;
+    -o-animation: shake infinite 17s 14s ease-in-out alternate;
+    -ms-animation: shake infinite 17s 14s ease-in-out alternate;
+}
+.gradient {
+    animation: gradient-rotate infinite 7s linear alternate both;
+    -webkit-animation: gradient-rotate infinite 7s ease alternate both;
+    -moz-animation: gradient-rotate infinite 5s linear alternate both;
+    -o-animation: gradient-rotate infinite 5s linear alternate both;
+    -ms-animation: gradient-rotate infinite 5s linear alternate both;
+}
   
   
 
 
-/* ************************************** */
+/* ******************************************* Media Queries ************************************** */
 @media screen and (min-width:521px) {
     ul.menu {
         visibility: visible !important;
@@ -501,7 +525,6 @@ section.section div img {
         width: 55%;
     }
     #text-sec0 div {
-        right: 10%;
         width: 50vw;
     }
 }
