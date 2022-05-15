@@ -284,13 +284,13 @@ section.section {
     z-index: 1;
 }
 div#img-sec0 {
-    width: 40%;
+    width: 60%;
     min-width: 300px;
 }
 div#text-sec0 {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 40%;
     justify-content: flex-end;
     text-align: end;
     font-family: 'Barlow', sans-serif;
@@ -302,16 +302,16 @@ div#text-sec0 {
 #text-sec0 div {
     background: #f3e8ee54;
     position: absolute;
-    width: 65vw;
+    width: 50vw;
     right: 0px;
-    padding: 0 2vw 0 0;
+    padding: 0 2vw 0 6vw;
     color: var(--twilight-lavender);
 }
 #text-sec0 h2, .sec-text h2 {
-    font-size: min(max(2.4vw,18px),22px);
+    font-size: min(max(2.4vw,22px),25px);
 }
 #text-sec0 p, .sec-text p {
-    font-size: min(max(2.7vw,14px),18px);
+    font-size: min(max(2.7vw,18px),22px);
 }
 section.section>div {
     width: 50%;
@@ -553,7 +553,7 @@ div.footer-logo img {
         max-height: fit-content;
     }
     div#img-sec0 {
-        width: 85%;
+        width: 100%;
     }
     #text-sec0 div {
         width: 42vw;
@@ -573,14 +573,17 @@ div.footer-logo img {
 }
 @media screen and (min-width:1080px) {
     .div-main {
-        width: 80%;
+        width: 85%;
     }
     .sec0 {
-        max-height: 480px;
+        max-height: 80vh;
 
     }
     div#img-sec0 {
         width: 55%;
+    }
+    div#text-sec0 {
+        width: 45%;
     }
     #text-sec0 div {
         width: 50vw;
@@ -647,18 +650,21 @@ div.footer-logo img {
         max-height: fit-content;
     }
     div#img-sec0 {
-        width: 86%;
+        width: 100%;
         justify-self: center;
     }
     div#text-sec0 {
         width: 100%;
     }
     #text-sec0 div {
-        background: #f3e8eea8;
-        position: absolute;
+        background: #f3e8ee54;
+        position: relative;
         width: 100%;
         right: 0px;
         padding: 2vw 2vw 2vw 0;
+    }
+    #text-sec0 h2 {
+        font-size: 1.5em;
     }
     #text-sec0 p {
         padding-left: 5em;
@@ -704,5 +710,7 @@ div.footer-logo img {
         width: 100%;
         min-width: unset;
     }
-
+    .instagram {
+        width: 95%;
+    }
 }
