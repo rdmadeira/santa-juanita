@@ -612,7 +612,7 @@ div.footer-logo img {
     left: calc((100vw - 75%)/2);
     top: 20%;
     opacity: 0;
-    z-index: 1;
+    z-index: 2;
     transition-property: all;
     transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.4, 0, 1, 1);

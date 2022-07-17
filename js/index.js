@@ -52,7 +52,7 @@ function showMenuMobile() {
 }
 
 
-var btnEnviar = document.getElementById('buton-enviar');
+/* var btnEnviar = document.getElementById('buton-enviar');
 btnEnviar.addEventListener('click',setForm);
 function setForm() {
     var name = document.formContacto.Nombre;
@@ -62,6 +62,34 @@ function setForm() {
     var data = [name.value, apellido.value, tel.value, email.value]
     console.log(data);
 }
+ */
+document.forms[0].addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    let name = document.formContacto.Nombre;
+    let apellido = document.formContacto.Apellido;
+    let tel = document.formContacto.Telefono;
+    let email = document.formContacto.email;
+    let data = {'name': name.value, 'apellido': apellido.value, 'telefono': tel.value, 'email': email.value}
+    console.log(data);
+    // let data2 = new FormData();
+    // data2.append('json', JSON.stringify(data), 'data.json')
+    // const nFetch = await fetch('./data/',{
+    //     method:'POST',
+    //     body: data2,
+    //     mode: 'cors',
+    //     headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //     },
+    // });
+    // const content = await nFetch.json();
+    // try {
+    //     console.log(content);
+    // } catch (error) {
+    //     console.log(error);
+    // }
+}
+)
 
 showSlides();
 }
