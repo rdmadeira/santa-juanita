@@ -75,18 +75,18 @@ document.forms[0].addEventListener('submit', async (e)=>{
     // data2.append('json', JSON.stringify(data), 'data.json')
     // const nFetch = await fetch('./data/',{
     //     method:'POST',
-    //     body: data2,
+    //     body: JSON.stringify(data),
     //     mode: 'cors',
     //     headers: {
     //         'Accept': 'application/json',
     //         'Content-Type': 'application/json'
     //     },
     // });
-    // const content = await nFetch.json();
+    // const content =  nFetch.json();
     // try {
-    //     console.log(content);
+    //     alert(JSON.stringify(content))
     // } catch (error) {
-    //     console.log(error);
+    //     alert(error)
     // }
 }
 )
